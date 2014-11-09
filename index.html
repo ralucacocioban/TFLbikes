@@ -1,0 +1,60 @@
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="js/index.js"></script>
+
+<script src="js/handlebars-v2.0.0.js"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+<script src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.full.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/mainPage.css">	
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+	<div class="row" id ="menu">
+		<div class="row">
+	<div class="col-lg-3 col-md-3 col-xs-0"></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><span><a href="#"><i class="fa fa-search"></i></a></span></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><span><a href="#"><i class="fa fa-bus"></i></a></span></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><span><a href="#"><i class="fa fa-info-circle"></i></a></span></div>
+	<div class="col-lg-3 col-md-3 col-xs-0"></div>
+		</div>
+
+		<div class="row">
+	<div class="col-lg-3 col-md-3 col-xs-0"></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><p>Search Station</p></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><p>Show Van Route</p></div>
+	<div class="col-lg-2 col-md-2 col-xs-4"><p>Get Info</p></div>
+	<div class="col-lg-3 col-md-3 col-xs-0"></div>
+		</div>
+
+</div>
+<hr width="50%">
+
+
+<div class="row" id ="search-container">
+<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
+
+	<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search Bike Station ..."/>
+    <span class="input-group-addon">
+        <i class="fa fa-search"></i>
+    </span>
+</div>
+
+</div>
+</div>
+
+<div class="row" id ="map-container">
+<div class="col-lg-1 col-md-1"></div>
+<div class="col-lg-10 col-ms-10" id = "map"></div>
+<div class="col-lg-1 col-md-1"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+html, body{
+
+width: 100%;
+height: 130%;
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #000000 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #000000 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #000000 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #000000));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #000000 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #FFFFFF 0%, #000000 100%);
+
+}
+
+
+.row{
+text-align: center;
+}
+
+#menu{
+
+height: 10%;
+padding-top: 1%;
+padding-bottom: 1%;
+
+}
+
+#menu span{
+
+	padding: 10%;
+	font-size: 3em;
+	
+}
+
+a:link {
+    color: #F0F8FF;
+}
+
+/* visited link */
+a:visited {
+    color: #F0F8FF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #C5908E;
+}
+
+#menu p{
+
+	font: 400 20px/1.2 'Merienda One', Helvetica, sans-serif;
+  color: #C7B097;
+  
+}
+
+
+#map{
+	
+	margin-top: 3%;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	height: 50%;
+
+
+}
+
+#search-container{
+	padding-top: 3%;
+}
