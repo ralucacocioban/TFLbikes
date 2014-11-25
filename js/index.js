@@ -1,3 +1,7 @@
+(function($){
+
+
+
 var BikeStation = (function(){
  
     var coordinates = [];
@@ -65,6 +69,7 @@ var image;
     },
     createMap: function(){
 
+console.log('in crete map');
     map = new google.maps.Map(document.getElementById('map'), {
     center: new google.maps.LatLng(51.507399, -0.127755),
     mapTypeId:google.maps.MapTypeId.ROADMAP,
@@ -100,10 +105,88 @@ var image;
 }());
 
 
+    
+    // Preloader     
+    $(window).load(function() { 
+        $('#status').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow'); 
+        $('body').delay(350).css({'overflow':'visible'});
+    }); 
 
-$( document ).ready(function() {
-    console.log( "ready!" );
+
+
+
+    $(document).ready(function() {
+        
+
     BikeStation.getBikeInformation();
     Map.setMarkerImage();
     Map.createMap();
+
+
+        // Image background
+        $.vegas({
+            src:'../images/test.jpg'
+        });
+
+        $.vegas('overlay', {
+            src:'assets/images/06.png'
+        });
+
+        var countdown =  $('.countdown-time');
+
+        $(window).on('resize', windowSize);
+
+        function windowSize(){
+            countdown.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function() {
+                countdown.removeClass('animated bounceIn');
+            });
+        }
+
+        // Open modal window on click
+        $('#info').on('click', function(e) {
+            var mainInner = $('.overlay'),
+                modal = $('#' + $(this).attr('data-modal'));
+                    
+            mainInner.animate({opacity: 0}, 400, function(){
+                $('html,body').scrollTop(0);
+                modal.addClass('active').fadeIn(400);
+                
+            });
+            e.preventDefault();
+
+            $('.modal-close').on('click', function(e) {
+                modal.removeClass('active').fadeOut(400, function(){
+                    mainInner.animate({opacity: 1}, 400);
+                    
+                    countdown.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function() {
+                        countdown.removeClass('animated bounceIn');
+                    });
+                });
+                e.preventDefault();
+            });
+        });
+
+        // Tooltips
+        $('.more-links a, .social a').tooltip();
+    
+        $('.more-links a, .social a').on('click', function () {
+            $(this).tooltip('hide')
+        });
+
+
+        $("#search ,#vanroute").click(function() {
+            $('html, body').animate({
+        scrollTop: $("#firstContainer").offset().top
+    }, 1500);
 });
+
+         $("#search").click(function(){
+
+            console.log('heyy')
+            
+    });
+
+     });
+
+})(jQuery);
