@@ -275,7 +275,7 @@ width: 100%;
 .display_pic{
 	width:80px;
 	height:80px;
-	margin: 10px 5px;
+	margin: 0 5px;
 }
 
 .info_text {
