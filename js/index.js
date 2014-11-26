@@ -123,6 +123,11 @@ console.log('in crete map');
     Map.setMarkerImage();
     Map.createMap();
 
+    $("#firstContainer").load("routeChoice.html");
+
+    $(document).on('click','#searchbtn',function(){
+            var something = $('input[type="text"]').val();
+    });
 
         // Image background
         $.vegas({
@@ -175,17 +180,32 @@ console.log('in crete map');
         });
 
 
-        $("#search ,#vanroute").click(function() {
+        $(document).on('mouseover', '.routeButton a',  function (element) {       
+         $(this).addClass('routeButtonHover');
+        }).on('mouseout', '.routeButton a',  function () {       
+         $(this).removeClass('routeButtonHover');
+        });;
+
+
+        $("#search").click(function() {
+
+            $("#firstContainer").load("searchBike.html");
             $('html, body').animate({
         scrollTop: $("#firstContainer").offset().top
     }, 1500);
+
+
+
 });
 
-         $("#search").click(function(){
+            $("#vanroute").click(function() {
+            $("#firstContainer").load("routeChoice.html");
+            $('html, body').animate({
+        scrollTop: $("#firstContainer").offset().top
+    }, 1500);
 
-            console.log('heyy')
-            
-    });
+});
+
 
      });
 
