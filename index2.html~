@@ -101,6 +101,16 @@
 						<h2>Info</h2>
 					</div>
 
+					<ul class="info_text">
+						<li>Optimised stations - all the racks will always 
+						have bikes available to pick up, and will always have 							space to park for your customers!</li>
+						<li>Greener London - providing a good experience to 
+						the customers always encourages them to come back for 
+						a friendlier environment!</li>
+						<li>UCL - a product made by students in one of the 
+						world’s leading institutions.</li>
+					</ul>
+
 					<p class="info_text">Rush hour is by no doubt the most busiest time for all us, 
 					and many Londoners depend on you for your services.  One of 
 					the major issue in our transport is the complete mess of our 
@@ -140,7 +150,7 @@
 						<img class="display_pic" src="images/vera.png"></img>
 					</div>
 					<p class="info_text">Row 1: Raluca (Team Leader)</p>
-					<p class="info_text">Row 2: Abbas, Aman, Isaac, Keshav, Kouki (Japanese Student)</p>
+					<p class="info_text">Row 2: Abbas, Aman, Isaac, Keshav, Kouki (NII Student)</p>
 					<p class="info_text">Row 3: Laurie, Michael, Necati, Tuan, Vera</p>
 
 
